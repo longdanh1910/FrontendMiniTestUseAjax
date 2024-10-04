@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Management</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="class.js"></script>
+</head>
+<body>
+
+<div id="navigation">
+    <a href="student.html">Manage Students</a>
+</div>
+
+<h1>Class Management</h1>
+
+<div>
+    <h2>Class Form</h2>
+    <form id="class-form">
+        <input type="hidden" id="class-id">
+        <label for="class-name">Class Name:</label>
+        <input type="text" id="class-name" placeholder="Enter class name" required>
+        <button type="submit" id="class-submit-button">Add Class</button>
+    </form>
+</div>
+
+<h3>Class List</h3>
+<table border="1" id="class-table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Class Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody id="class-body">
+    <!-- Các lớp học sẽ được hiển thị ở đây -->
+    </tbody>
+</table>
+
+</body>
+</html>
