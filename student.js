@@ -39,6 +39,7 @@ function loadClasses() {
         error: function() {
             alert('Unable to load classes');
         }
+
     });
 }
 
@@ -52,6 +53,7 @@ function loadStudents() {
             studentBody.empty();
 
             $.each(students, function(i, student) {
+                const className = student.studentClass ? student.studentClass.name : 'No Class';
                 studentBody.append(`
                     <tr>
                         <td>${student.id}</td>
@@ -60,7 +62,7 @@ function loadStudents() {
                         <td>${student.dob}</td>
                         <td>${student.address}</td>
                         <td>${student.mark}</td>
-                        <td>${student.studentClass.name}</td>
+                        <td>${className}</td>
                         <td>
                             <button onclick="editStudent(${student.id})">Edit</button>
                             <button onclick="deleteStudent(${student.id})">Delete</button>
